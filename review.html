@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews - Angel Nails</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .marquee {
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="max-w-6xl mx-auto p-6">
+
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-pink-500">Customer Reviews</h1>
+      <p class="text-gray-600">What our clients say about us</p>
+    </div>
+
+    <!-- Overall Rating -->
+    <div class="bg-white rounded-2xl shadow p-6 mb-8 text-center">
+      <div class="text-5xl font-bold text-yellow-500">4.9 ★</div>
+      <p class="text-gray-500 mt-2">Based on 120 reviews</p>
+    </div>
+
+    <!-- Marquee Reviews -->
+    <div class="marquee">
+      <div class="marquee-track">
+
+        <!-- Review 1 -->
+        <div class="bg-white p-5 rounded-2xl shadow w-80">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-pink-400 text-white rounded-full flex items-center justify-center font-bold">A</div>
+              <div>
+                <p class="font-semibold">Anna Tran</p>
+                <p class="text-sm text-gray-400">2 days ago</p>
+              </div>
+            </div>
+            <div class="text-yellow-400">★★★★★</div>
+          </div>
+          <p class="mt-3 text-gray-600">Absolutely love my nails! The staff are super friendly and professional 💖</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-5 rounded-2xl shadow w-80">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center font-bold">J</div>
+              <div>
+                <p class="font-semibold">Jessica Nguyen</p>
+                <p class="text-sm text-gray-400">1 week ago</p>
+              </div>
+            </div>
+            <div class="text-yellow-400">★★★★★</div>
+          </div>
+          <p class="mt-3 text-gray-600">Best nail salon I've ever been to. Clean and relaxing!</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-5 rounded-2xl shadow w-80">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-green-400 text-white rounded-full flex items-center justify-center font-bold">M</div>
+              <div>
+                <p class="font-semibold">Maria Lopez</p>
+                <p class="text-sm text-gray-400">3 weeks ago</p>
+              </div>
+            </div>
+            <div class="text-yellow-400">★★★★☆</div>
+          </div>
+          <p class="mt-3 text-gray-600">Great service and nice atmosphere. Worth it!</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
