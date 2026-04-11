@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nail Salon Price List</title>
+<style>
+    :root {
+        --primary-pink: #d99aa5; 
+        --text-dark: #333;
+        --bg-light: #fdfdfd;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pricing-container {
+        display: flex;
+        gap: 30px;
+        max-width: 1200px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pricing-card {
+        background: var(--bg-light);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        flex: 1;
+        min-width: 300px;
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-header {
+        position: relative;
+        height: 200px;
+        background: linear-gradient(rgba(217, 154, 165, 0.6), rgba(217, 154, 165, 0.6)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Header riêng cho từng card */
+    .pricing-card:nth-child(1) .card-header {
+        background: linear-gradient(rgba(217, 154, 165, 0.6), rgba(217, 154, 165, 0.6)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80') center/cover;
+    }
+    .pricing-card:nth-child(2) .card-header {
+        background: linear-gradient(rgba(217, 154, 165, 0.6), rgba(217, 154, 165, 0.6)), url('https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80') center/cover;
+    }
+    .pricing-card:nth-child(3) .card-header {
+        background: linear-gradient(rgba(217, 154, 165, 0.6), rgba(217, 154, 165, 0.6)), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80') center/cover;
+    }
+    .pricing-card:nth-child(4) .card-header {
+        background: linear-gradient(rgba(217, 154, 165, 0.6), rgba(217, 154, 165, 0.6)), url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=600&q=80') center/cover;
+    }
+    .pricing-card:nth-child(5) .card-header {
+        background: linear-gradient(rgba(217, 154, 165, 0.6), rgba(217, 154, 165, 0.6)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80') center/cover;
+    }
+
+    .card-title {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        padding: 0 20px;
+    }
+
+    .card-body {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 18px;
+        line-height: 1.4;
+    }
+
+    .service-info {
+        flex: 1;
+        padding-right: 15px;
+    }
+
+    .service-name {
+        color: var(--text-dark);
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .service-desc {
+        font-size: 11px;
+        color: #777;
+        margin-top: 4px;
+        text-transform: none;
+    }
+
+    .service-price {
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--text-dark);
+        white-space: nowrap;
+    }
+
+    .book-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary-pink);
+        color: white;
+        text-decoration: none;
+        padding: 14px;
+        border-radius: 30px;
+        font-weight: 600;
+        margin-top: auto;
+        transition: opacity 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .book-btn:hover {
+        opacity: 0.8;
+    }
+
+    .extra-note {
+        font-size: 12px;
+        font-style: italic;
+        color: #666;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background: #f9f0f2;
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    @media (max-width: 900px) {
+        .pricing-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="pricing-container">
+    
+    <!-- Card 1: Acrylic & BIAB -->
+    <div class="pricing-card">
+        <div class="card-header">
+            <div class="card-title">Acrylic & BIAB</div>
+        </div>
+        <div class="card-body">
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Full set acrylic with gel polish</div></div>
+                <div class="service-price">£35</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Full set acrylic powder color</div></div>
+                <div class="service-price">£35</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Full set Ombré</div></div>
+                <div class="service-price">£38</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Full set with french tips</div></div>
+                <div class="service-price">£38</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">New BIAB with gel polish</div></div>
+                <div class="service-price">£33</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Infill BIAB with french tips</div></div>
+                <div class="service-price">£35</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">BIAB Extensions</div></div>
+                <div class="service-price">£40</div>
+            </div>
+            <a href="https://angelnailslivingston.setmore.com/" class="book-btn">Book Your Appointment Now</a>
+        </div>
+    </div>
+
+    <!-- Card 2: Take off & New Set (đã thêm ảnh) -->
+    <div class="pricing-card">
+        <div class="card-header">
+            <div class="card-title">Take off & New Set</div>
+        </div>
+        <div class="card-body">
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Take off and new set with gel polish</div></div>
+                <div class="service-price">£38</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Take off and new set powder color</div></div>
+                <div class="service-price">£38</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Take off and new set ombré</div></div>
+                <div class="service-price">£40</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Take off and new set french tips</div></div>
+                <div class="service-price">£40</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Take off acrylic and new BIAB color</div></div>
+                <div class="service-price">£38</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Take off acrylic/BIAB (Only)</div></div>
+                <div class="service-price">£10</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Take off Gel (Only)</div></div>
+                <div class="service-price">£7</div>
+            </div>
+            <a href="https://angelnailslivingston.setmore.com/" class="book-btn">Book Your Appointment Now</a>
+        </div>
+    </div>
+
+    <!-- Card 3: Gel Polish -->
+    <div class="pricing-card">
+        <div class="card-header">
+            <div class="card-title">Gel Polish</div>
+        </div>    
+        <div class="card-body">
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-name">Manicure (no color)</div>
+                </div>
+                <div class="service-price">£15</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-name">Gel polish on hand</div>
+                    <div class="service-desc">New / Take off & renew</div>
+                </div>
+                <div class="service-price">£20 / £25</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-name">Gel polish on toes</div>
+                    <div class="service-desc">New / Take off & renew</div>
+                </div>
+                <div class="service-price">£25 / £25</div>
+            </div>
+            <a href="https://angelnailslivingston.setmore.com/" class="book-btn">Book Your Appointment Now</a>
+        </div>
+    </div>
+
+    <!-- Card 4: Pedicure -->
+    <div class="pricing-card">
+        <div class="card-header">
+            <div class="card-title">Pedicure</div>
+        </div>
+        <div class="card-body">
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Spa pedicure (no color)</div></div>
+                <div class="service-price">£30</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info"><div class="service-name">Spa pedicure with gel</div></div>
+                <div class="service-price">£38</div>
+            </div>
+            <a href="https://angelnailslivingston.setmore.com/" class="book-btn">Book Your Appointment Now</a>
+        </div>
+    </div>
+
+    <!-- Card 5: Other Services -->
+    <div class="pricing-card">
+        <div class="card-header">
+            <div class="card-title">Other</div>
+        </div>       
+        <div class="card-body">
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-name">Infill acrylic with gel polish</div>
+                </div>
+                <div class="service-price">£30</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-name">Infill ombre</div>
+                </div>
+                <div class="service-price">£33</div>
+            </div>
+            <div class="service-item">
+                <div class="service-info">
+                    <div class="service-name">Infill acrylic with French tips</div>
+                </div>
+                <div class="service-price">£33</div>
+            </div>
+            <div class="extra-note">
+                ✨ Design, Gems, Chrome, Cat eye: Extra charge
+            </div>
+            <a href="https://angelnailslivingston.setmore.com/" class="book-btn">Book Your Appointment Now</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
